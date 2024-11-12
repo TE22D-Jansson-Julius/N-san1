@@ -30,3 +30,56 @@ string password2 ="";
 while (password2 != "nopass"){
 password2 = Console.ReadLine();
 }
+
+// Steg 6 
+for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Ange ett tal: ");
+                string input = Console.ReadLine();
+                
+                int tal = int.Parse(input);
+                
+                if (tal > 5)
+                {
+                    Console.WriteLine("högre än 5!");
+                }
+            }
+        
+
+// Steg 7
+string ggez = ""; 
+while (!int.TryParse(ggez,out int ggwp))
+    {
+        ggez=Console.ReadLine();
+        
+    }
+
+
+//Steg 8
+ Random random = new Random();
+            int targetNumber = random.Next(1, 11);
+            int guess = 0;
+            Console.WriteLine("Gissa ett tal mellan 1 och 10!");
+            while (guess != targetNumber)
+            {
+                Console.Write("Gissa: ");
+                if (int.TryParse(Console.ReadLine(), out guess))
+                {
+                    if (guess < targetNumber)
+                    {
+                        Console.WriteLine("För lågt :(");
+                    }
+                    else if (guess > targetNumber)
+                    {
+                        Console.WriteLine("För högt:(");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Rätt gissat:)");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Får inte skriva så:(");
+                }
+            }
